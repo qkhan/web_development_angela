@@ -1,0 +1,27 @@
+Q: How do you find all the commits happened so far?
+
+A: 
+
+git log 
+
+Q: How do you revert back to the last position in local repository?
+A: 
+
+git checkout filename
+
+Q: How do you create branch
+
+git branch qaisar_branch
+
+Q: How do you check which branch you are in?
+A: 
+
+git branch
+
+Q: How do you go back to master branch?
+A: 
+
+	git checkout master 
+
+Q: 
+

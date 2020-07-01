@@ -1,0 +1,50 @@
+INSERT
+> db.products.insertOne({_id: 2, name: "Pencil", price: 0.80, stock: 12})
+{ "acknowledged" : true, "insertedId" : 2 }
+
+> db.products.find()
+{ "_id" : 1, "name" : "Pen", "price" : 1.2 }
+{ "_id" : 2, "name" : "Pencil", "price" : 0.8, "stock" : 12 }
+> db.products.find({name: "Pencil"})
+{ "_id" : 2, "name" : "Pencil", "price" : 0.8, "stock" : 12 }
+
+FIND
+> db.products.find({price: {$gt: 1}})
+{ "_id" : 1, "name" : "Pen", "price" : 1.2 }
+> db.products.find({_id: 1}, {name: 1})
+{ "_id" : 1, "name" : "Pen" }
+> db.products.find({_id: 1}, {name: 1, _id: 0})
+{ "name" : "Pen" }
+
+UPDATE
+> db.products.updateOne({_id: 1}, {$set: {stock: 32}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+DELETE
+> db.products.deleteOne({_id: 2})
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+
+RUN MONGO DB
+mongod --config /usr/local/etc/mongod.conf --fork
+
+KILL ALL MONGO processes
+sudo pkill -f mongod
+
+
+DROP DATABASE
+> show dbs
+admin     0.000GB
+config    0.000GB
+fruitsDB  0.000GB
+local     0.000GB
+shopDB    0.000GB
+> use fruitsDB
+switched to db fruitsDB
+> db.dropDatabase()
+{ "dropped" : "fruitsDB", "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+shopDB  0.000GB

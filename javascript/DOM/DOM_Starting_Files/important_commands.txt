@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1>Hello</h1>
+
+    <input type="checkbox">
+
+    <button style=":active color:red;">Click Me</button>
+
+    <ul id="list">
+      <li class="item">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="item">Second</li>
+      <li class="item">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+document.lastElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML = "Qaisar Khan";
+================================================================================================================
+Tags are UL, LI, H1, H2, etc
+document.getElementByTagName("li")[2].style.color = "purple";
+================================================================================================================
+Element by ID
+document.getElementById("title");
+================================================================================================================
+Element by Class
+document.getElementByClassName("title");
+================================================================================================================
+querySelector("#title");
+querySelector(".btn");
+querySelector("li a");
+================================================================================================================
+<li class="item"><a href="google.com">Google</a></li>
+querySelector("li a");
+<a href="google.com">Google</a>
+querySelector("li.item"); "li and item is same element"
+<li class="item"><a href="google.com">Google</a></li>
+================================================================================================================
+    <ul id="list">
+      <li class="item">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="item">Second</li>
+      <li class="item">Third</li>
+    </ul>
+
+document.querySelector("#list a")
+
+        <a href="https://www.google.com">Google</a>
+
+
+document.querySelector("#list .item")
+
+      <li class="item">
+        <a href="https://www.google.com">Google</a>
+      </li>
+
+
+document.querySelectorAll("#list .item")
+
+
+      <li class="item">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="item">Second</li>
+      <li class="item">Third</li>
+
+
+document.querySelectorAll("#list .item")[2].style.color = "blue"
+      <li class="item">Third</li> beceome blue
+
+================================================================================================================
+
+.invisible {
+   visibility: hidden;
+}
+
+document.querySelector("button").classlist.add("invisible");
+document.querySelector("button").classlist.remove("invisible");
+document.querySelector("button").classlist.toggle("invisible"); // on and off
+
+================================================================================================================
+
+document.querySelector("h1").innerHTML; "Give the inner HTML"
+document.querySelector("h1").textContent; "Give the text only"
+
+================================================================================================================
+document.querySelector("a");
+<a href="https://www.google.com">Google</a>
+
+document.querySelector("a").attributes;
+NamedNodeMap {0: href, href: href, length: 1}
+document.querySelector("a").getAttribute("href");
+"https://www.google.com"
+document.querySelector("a").setAttribute("href", "bing.com");
+undefined
+
+
+
